@@ -29,7 +29,7 @@ pip3 install numpy
 Podemos compilar el código C para luego poder importarlo de la siguiente forma:
 
 ```bash
-gcc -shared -fPIC -o libmodulo.so modulo.c
+gcc -shared -fopenmp -fPIC -o libmodulo.so modulo.c
 ```
 
 ## Resultados
