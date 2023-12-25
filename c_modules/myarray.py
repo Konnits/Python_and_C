@@ -12,7 +12,7 @@ class array(ctypes.Structure):
 
 class Array:
     
-    lib = ctypes.CDLL('./c_modules/myarray.so')
+    lib = ctypes.CDLL('./c_modules/libmyarray.so')
 
     lib.NewArray.argtypes = [ctypes.c_uint64]
     lib.NewArray.restype = ctypes.POINTER(array)

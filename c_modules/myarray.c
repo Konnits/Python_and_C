@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <omp.h>
 
 typedef struct{
     int *array;
@@ -14,6 +15,7 @@ Array* NewArray(unsigned long long size){
 
 unsigned long long SumArray(Array *array){
     long long sum = 0;
+    #pragma omp parallel for reduction(+:sum)
     for(int i = 0; i < array->size; i++){
         sum += array->array[i];
     }
