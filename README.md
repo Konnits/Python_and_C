@@ -36,6 +36,6 @@ gcc -shared -fPIC -o libmodulo.so modulo.c
 
 ```bash
 python3 main.py
-Time for C: 0.4412848949432373
-Time for numpy: 0.49985694885253906
+Time for C: 0.25798839569091797
+Time for numpy: 0.13208088874816895
 ```

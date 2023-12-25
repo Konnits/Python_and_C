@@ -4,13 +4,24 @@ import time
 
 n = 100_000_000
 
-start = time.time()
-a = Range(n)
-a.sum()
-end = time.time()
-print(f"Time for C: {end-start}")
+n_test = 50
+times = []
 
-start = time.time()
-np.arange(n).sum()
-end = time.time()
-print(f"Time for numpy: {end-start}")
+for _ in range(n_test):
+    start = time.time()
+    a = Range(n)
+    a.sum()
+    end = time.time()
+    del a
+    times.append(end-start)
+print(f"Time for C: {np.mean(times)}")
+
+times = []
+for _ in range(n_test):
+    start = time.time()
+    b = np.arange(n)
+    b.sum()
+    end = time.time()
+    del b
+    times.append(end-start)
+print(f"Time for numpy: {np.mean(times)}")

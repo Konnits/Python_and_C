@@ -1,5 +1,4 @@
 import ctypes
-from typing import Any
 
 __all__ = ['Array']
 
