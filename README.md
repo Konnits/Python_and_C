@@ -31,3 +31,11 @@ Podemos compilar el código C para luego poder importarlo de la siguiente forma:
 ```bash
 gcc -shared -fPIC -o libmodulo.so modulo.c
 ```
+
+## Resultados
+
+```bash
+python3 main.py
+Time for C: 0.4412848949432373
+Time for numpy: 0.49985694885253906
+```
